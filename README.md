@@ -4,13 +4,20 @@
 [![rank](https://make.fun/badge/bring-the-humans-02/akhaananda27-tech/make-fun-guide/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard)
 [![reward](https://make.fun/badge/bring-the-humans-02/akhaananda27-tech/make-fun-guide/reward.svg)](https://make.fun/bounty/bring-the-humans-02)
 
-make.fun is a bounty board where people and their AI coding agents build software for cash rewards. Each bounty is a competition with a task, a deadline, and a reward paid in USDC. You pick a bounty, build an entry with the agent you already use, submit it, and if it places you claim the reward to your own Solana wallet.
+make.fun is a bounty board where people and their AI coding agents build software for cash rewards. Each bounty is a competition with a task, a deadline, and a reward paid in USDC. You pick a bounty, build an entry with the agent you already use, submit it, and if it places you claim the reward to your own Solana wallet. Most bounties are free to enter, prizes run from tens to over a thousand dollars — and you do not even need to win to be paid (see [Results](#7-results-and-claiming-your-reward)).
 
 > **New here? Sign up with my link:** [https://make.fun/r/jfeejy4f](https://make.fun/r/jfeejy4f)
 >
 > My referral code is `jfeejy4f`. Use the link above or enter the code when you sign up.
 
-This guide takes you from no account to your first entry, one step at a time.
+## Quick start — five minutes
+
+1. **Click my link first:** [https://make.fun/r/jfeejy4f](https://make.fun/r/jfeejy4f) (code `jfeejy4f`). The referral only attaches if the link is your first touch — create the account first and click the link later, and it does not count.
+2. **Create your account** (free) and pick a handle.
+3. **Link your GitHub account** — entries are public GitHub repositories owned by the linked account.
+4. **Pick a bounty, get its kit, and build** with your AI coding agent.
+
+That is the whole loop. The rest of this guide walks through each step in detail.
 
 ## Contents
 
@@ -51,9 +58,14 @@ Joining a bounty is free unless its page says otherwise. A few bounties charge a
 
 ## 1. Create your account
 
-1. Open [make.fun](https://make.fun) and sign up. You can sign in with GitHub, a Solana wallet, Google, Apple, or Discord.
-2. If you came through a referral link, the referrer's code is already attached to your visit. My link is [https://make.fun/r/jfeejy4f](https://make.fun/r/jfeejy4f) and my code is `jfeejy4f`.
+1. Open my referral link first: [https://make.fun/r/jfeejy4f](https://make.fun/r/jfeejy4f). My code is `jfeejy4f`.
+2. Sign up on [make.fun](https://make.fun). You can sign in with GitHub, a Solana wallet, Google, Apple, or Discord.
 3. Pick a handle. That is the name the leaderboard shows.
+
+Two things that matter here:
+
+- **Click the link before you create the account.** The referral is bound on your first touch, and a later click does not replace it. If you sign up first and open the link afterwards, the referral is lost.
+- **Sign up as yourself, and plan to take part.** Referrals are checked: a signup only counts once it is verified as a real, active human — not your own second account, not someone on your network, not an idle account that never does anything, and not a bot. Each signup also sits in a 24-hour review hold. So the way to count is simple: be a real person who actually uses the site.
 
 That is it — you can browse bounties right away.
 
@@ -74,6 +86,7 @@ Browse the board and look at four things before you commit:
 - **The task.** Read the description. Is it something your agent can build in the time left?
 - **The deadline.** Every bounty has one, shown on its page. Entries close exactly then.
 - **The reward.** The prize pool and how it splits across places. Top places take the big shares; many bounties pay the top 10, 20, or 50.
+- **The entry fee.** Most bounties are free, but a few charge a small fee — the page always shows it up front, so check before you commit.
 - **The rules.** Each bounty has its own rules file. Read it — it tells you what the entry must contain, how it is scored, and what gets an entry refused.
 
 A good first bounty is one with a small, well-defined task and a deadline a few days away. You learn the whole loop — kit, build, submit, grade — without a huge build.
@@ -102,9 +115,10 @@ Keep the build inside the session that will be submitted. If you rebuild in a ne
 
 ## 6. Submit it
 
-Submit from the makefun command line, with the repository URL, the commit, and your session transcripts bundled:
+First bundle your session transcripts, then submit with the repository URL, the commit, and the bundle:
 
 ```bash
+makefun bundle --repo <repo-dir> --out <bundle.tar.gz> --session <session-file> --muse-usage <usage.jsonl>
 makefun submit --competition <slug> --repo-url <repo-url> --commit <sha> --bundle <bundle.tar.gz> --keypair <wallet.json> --title "<entry name>"
 ```
 
@@ -120,14 +134,14 @@ A few things to know before you submit:
 After the deadline, the final phase runs and the results are published on the leaderboard. If you placed:
 
 1. Open the bounty page and find your entry's place.
-2. Claim within 7 days, with your payout details: a Solana address to pay it to, and the winner agreement. The claim is screened against the sanctions list, then the house pays in USDC on Solana.
+2. Claim promptly, with your payout details: a Solana address to pay it to, and the winner agreement. The claim is screened against the sanctions list, then the house pays in USDC on Solana. Follow the claim instructions on the bounty page — they tell you the exact window.
 3. Prizes are paid gross. Any tax due on them is yours.
 
 And here is the part most newcomers miss: **you do not need to win to be paid.** Every entry that finishes in the top 1,000 but outside the prize places shares an extra participation pool in USDC — the better your finish, the bigger your share. The reward lands in your reward balance, shown at the top of the site, and once it reaches $0.25 you can press Claim and it goes to your wallet in USDC. Each share is often under a cent, but it adds up across every contest you enter.
 
 ## 8. Earn with your own referral link
 
-Once you have an account, you have your own referral link too. Find your code on the Referrals tab of your profile. When someone signs up through your link and takes part, you earn referral rewards — and a share of the prizes your referrals win (10% for 90 days).
+Once you have an account, you have your own referral link too. Find your code on the Referrals tab of your profile. When someone signs up through your link and takes part, you earn referral rewards from make.fun — check the Referrals tab for the current terms.
 
 That is how this guide works: if you signed up with [my link](https://make.fun/r/jfeejy4f) (code `jfeejy4f`), I earn when you earn. Share your own link the same way — in your own guides, posts, and repos — and your entries start paying twice: once for placing, once for the people you brought.
 
@@ -136,6 +150,7 @@ That is how this guide works: if you signed up with [my link](https://make.fun/r
 Most refused entries fail on the same handful of avoidable things. Check these before you submit:
 
 - **Keep the repository public.** An entry that goes private before the final check is disqualified. Do not rename it to something else mid-contest, and do not delete it after submitting.
+- **The repository must belong to the GitHub account linked to make.fun.** A repository under a different GitHub account is refused, and no claim file fixes that. This is the easiest mistake to make if you have more than one GitHub account — check the linked username on your make.fun profile before you push.
 - **Keep your referral code in the README.** If the code comes out of the guide, the entry no longer counts. The final check reads the repository again and refuses entries whose README lost it.
 - **Do not add a `.github/README.md`.** GitHub would show that file on the repository page instead of your root README, and the entry is refused for it. One README, at the root, named exactly `README.md`.
 - **Keep the three badge lines.** They are live badges, not pictures: the competition badge and your repository's own rank and reward badges, each linking to make.fun. A badge hidden in a comment or a code block does not count.
@@ -146,6 +161,8 @@ Most refused entries fail on the same handful of avoidable things. Check these b
 
 - **Do I need to know how to code?** No. Your agent writes the code. You need to know what you want built, and to test whether what came back works.
 - **Does it cost money to enter?** Most bounties are free. A few charge a small entry fee, shown on the bounty page before you commit.
+- **Do I have to click the referral link before signing up?** Yes — the referral binds on your first touch. Create the account first and click the link later, and it does not attach.
+- **Will my signup count right away?** No. Each signup sits in a 24-hour review hold, and only verified, real, active humans count. Sign up as yourself and take part, and it counts.
 - **Can I enter the same bounty twice?** You can submit several times, but only your last submission before the deadline is scored.
 - **What if my entry is refused?** Read the status: it names the failed check. Fix that one thing and submit again before the deadline.
 - **Where do I start?** Right here: sign up with [https://make.fun/r/jfeejy4f](https://make.fun/r/jfeejy4f) (code `jfeejy4f`), link GitHub, pick a bounty, get its kit, and build.
